@@ -4,7 +4,7 @@ UnB/MAT Modelo de Dissertações e Tese
 
 
 [![Join the chat at https://gitter.im/kks32/phd-thesis-template](https://badges.gitter.im/kks32/phd-thesis-template.svg)](https://gitter.im/kks32/phd-thesis-template?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-> A LaTeX / XeLaTeX / LuaLaTeX PhD thesis template for Cambridge University Engineering Department.
+> Modelo de Teses e dissertações - Departamento de Matemática - Universidade de Brasília.
 
 [![License MIT](http://img.shields.io/badge/license-MIT-brightgreen.svg)](license.md)
 [![Version](http://img.shields.io/badge/version-0.1-brightgreen.svg)](https://github.com/deividrvale/unb-thesis-template)
@@ -18,7 +18,7 @@ UnB/MAT Modelo de Dissertações e Tese
 
 * Modelo Baseado no trabalho de Krishna Kumar [https://github.com/kks32/phd-thesis-template](https://github.com/kks32/phd-thesis-template). Modificado para se adequar aos padrões da Universidade de Brasília.
 
-* Suporta LaTeX, XeLaTeX and LuaLaTeX
+* Suporta LaTeX, XeLaTeX and LuaLaTeX.
 
 * Título Adaptável: Texto se adapta de acordo com o tamanho do título.
 
@@ -26,11 +26,11 @@ UnB/MAT Modelo de Dissertações e Tese
 
 * Versões para imprenssão e online.
 
-* Suporta mudança de estilo de Bibliografia (authoryear / numbered / custom)
+* Suporta mudança de estilo de Bibliografia (authoryear / numbered / custom).
 
-* Margens pré-definidas e customizáveis
+* Margens pré-definidas e customizáveis.
 
-* Modo rascunho
+* Modo rascunho.
 
 --------------------------------------------------------------------------------
 
@@ -43,8 +43,6 @@ O modelo suporta `XeLaTeX` . Para gerar o PDF manualmente execute
     latexmk -xelatex thesis.tex
     makeindex thesis.nlo -s nomencl.ist -o thesis.nls
     latexmk -xelatex -g thesis.tex
-
-## usando - LuaLaTeX
 
 ### usando latexmk (Unix/Linux/Windows)
 
@@ -80,9 +78,9 @@ Uso: `sh ./compile-thesis.sh [OPTIONS] [filename]`
 
 -------------------------------------------------------------------------------
 
-## Usage details
+## Configurações Iniciais
 
-Thesis information such as title, author, year, degree, etc., and other meta-data can be modified in `thesis-info.tex`
+Informações da dissertação como título, autor, ano, grau, etc., além de outras meta-informações podem ser modificadas em `thesis-info.tex`
 
 ### Class options
 
