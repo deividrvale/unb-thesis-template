@@ -1,7 +1,7 @@
 % ******************************* UnB - Departamento de Matemática **************************
 % Por favor, dê uma olhada no arquivo LEIAME.md para mais informações sobre como usar o template
 
-\documentclass[a4paper,12pt,times,numbered,index, print]{Classes/PhDThesisPSnPDF}
+\documentclass[a4paper,12pt,times,numbered,index, print]{PhDThesisPSnPDF}
 
 % ******************************************************************************
 % ******************************* Opções Comuns ********************************
@@ -71,8 +71,11 @@
 
 \maketitle
 
+\includepdf[pages={{}, 1, {}}]{Assets/second_front}
+
+\includepdf[pages={1, {}}]{Assets/library_catalog}
+
 \include{Dedication/dedication}
-%\include{Declaration/declaration}
 \include{Acknowledgement/acknowledgement}
 \include{Abstract/abstract}
 
