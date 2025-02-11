@@ -1,93 +1,121 @@
 %!TEX root = ../thesis.tex
 % ******************************* Thesis Appendix A ****************************
-\chapter{Como Instalar o \LaTeX}
-
-\ifpdf
-	\graphicspath{{Appendix1/Figs/Raster/}{Appendix1/Figs/PDF/}{Appendix1/Figs/}}
-\else
-	\graphicspath{{Appendix1/Figs/Vector/}{Appendix1/Figs/}}
-\fi
+\chapter{How to install \LaTeX} 
 
 \section*{Windows OS}
 
-Recomendamos o uso do Windows 7 (ou mais novo). Existem dois pacotes de instação do \LaTeX  (mais comuns) o TeXLive e MikTeX. TexLive é mais fácil de trabalhar.
-
-\subsection*{Instalação do TeXLive}
+\subsection*{TeXLive package - full version}
 \begin{enumerate}
-	\item	Baixe o Intalador do TexLive para windows (link abaixo)\\
-	      \href{http://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe}{http://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe}
-
-	\item Para evitar problemas na instalação é recomendado: \textbf{Desligar o Antivírus} e principalmente, \textbf{Executar o Instalador como Administrador}, (Clique com o Botão direito no instalador e escolha a opção \textit{Executar como Administrador}).
-
-	\item O instalador lhe dará três opções de instalação. Primeira, ``Simple Install (big)'' : Instala a maioria dos pacotes, ocupa em torno de 2GB à 4.7GB. Segundo, ``Custom Install'': Instação personalizada e, por último, ``Unpack Only'': somente use essa opção se for realmente preciso e você sabe o que está fazendo.
-	\item Se você escolheu a instalação simples no passo acima, apenas aguarde que o processo termine. Isso irá instalar tudo que você precisa para utilizar o \LaTeX.
-	\item Passos para instalação customizada:
-	      \begin{enumerate}
-		      \item Clique no Botão ``Install'' e aguarde um momento até a janela de personalização da instalação ser iniciada. \\
-		            \begin{figure}[htbp!]
-			            \centering
-			            \includegraphics[width=0.7\textwidth]{install-tl-01}
-			            \caption[Instação Personalizaa]{Tela Inicial da Instalação Personalizada.}
-			            \label{fig:install-tl-01}
-                    \end{figure}
-
-              \item Na primeira opção você pode escolher um esquema de instalação. Para compilar a dissertação é recomendado os esquemas: completo ou médio. Você também pode personalizar quais coleções de pacotes deseja instalar. Como na figura abaixo.
-              \begin{figure}[htbp!]
-                \centering
-                \includegraphics[width=0.7\textwidth]{install-tl-02}
-                \caption[Instação Personalizaa]{Escolhendo coleções a serem instaladas.}
-                \label{fig:install-tl-02}
-            \end{figure}
-
-            \item Personalizada a instalação, clique em ``Instalar o TeXLive'' e espere todos os downloads terminarem.
-	      \end{enumerate}
+\item	Download the TeXLive ISO (2.2GB) from\\
+\href{https://www.tug.org/texlive/}{https://www.tug.org/texlive/}
+\item	Download WinCDEmu (if you don't have a virtual drive) from \\
+\href{http://wincdemu.sysprogs.org/download/}
+{http://wincdemu.sysprogs.org/download/}
+\item	To install Windows CD Emulator follow the instructions at\\
+\href{http://wincdemu.sysprogs.org/tutorials/install/}
+{http://wincdemu.sysprogs.org/tutorials/install/}
+\item	Right click the iso and mount it using the WinCDEmu as shown in \\
+\href{http://wincdemu.sysprogs.org/tutorials/mount/}{
+http://wincdemu.sysprogs.org/tutorials/mount/}
+\item	Open your virtual drive and run setup.pl
 \end{enumerate}
 
+or
 
 \subsection*{Basic MikTeX - \TeX~ distribution}
 \begin{enumerate}
-	\item	Download Basic-MiK\TeX (32bit or 64bit) from\\
-	      \href{http://miktex.org/download}{http://miktex.org/download}
-	\item	Run the installer
-	\item	To add a new package go to Start >> All Programs >> MikTex >> Maintenance (Admin) and choose Package Manager
-	\item	Select or search for packages to install
+\item	Download Basic-MiK\TeX (32bit or 64bit) from\\
+\href{http://miktex.org/download}{http://miktex.org/download}
+\item	Run the installer 
+\item	To add a new package go to Start >> All Programs >> MikTex >> Maintenance (Admin) and choose Package Manager
+\item	Select or search for packages to install
 \end{enumerate}
 
-\section*{Editor - \TeX~ }
-Existem vários editores para \LaTeX, escolha o que você mais gosta. Recomendados:
+\subsection*{TexStudio - \TeX~ editor}
 \begin{enumerate}
-	\item \textbf{TexStudio}: editor poderoso e fácil de usar, pode ser baixado do link abaixo\\
-	      \href{https://www.texstudio.org/}{https://www.texstudio.org/}
-        \begin{enumerate}
-            \item	Execute o Instalador
-	        \item (Opcional): Você pode instalar o \textbf{Language Tool}\footnote{Necessário possuir Java 8 ou superior.} para suporte à correções gramaticais e de estilo linguístico. Baixe o Language tool no endereço \\
-            \href{https://languagetool.org/pt}{https://languagetool.org/pt}
-        \end{enumerate}
-
-    \item \textbf{Visual Studio Code:} É um editor de objetivo geral, mas pode ser utilizado de maneira muito simples para edição de documetos \LaTeX. Baixe em \\
-    \href{https://code.visualstudio.com}{https://code.visualstudio.com}
-
-    \begin{enumerate}
-        \item O Suporte \LaTeX para o Visual Studio Code é instalado por uma extenção (\href{https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop}{\textbf{Latex Workshop}}). Basta seguir as instruções em \href{https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop}{neste link.}
-    \end{enumerate}
-
-
+\item	Download TexStudio from\\
+\href{http://texstudio.sourceforge.net/\#downloads}
+{http://texstudio.sourceforge.net/\#downloads} 
+\item	Run the installer
 \end{enumerate}
 
 \section*{Mac OS X}
-\subsection*{MacTeX - \TeX~ distribuição}
+\subsection*{MacTeX - \TeX~ distribution}
 \begin{enumerate}
-	\item	Baixe o instalador de\\
-	      \href{https://www.tug.org/mactex/}{https://www.tug.org/mactex/}
-	\item	Extraia e execute o instalador. A configuração é automática.
+\item	Download the file from\\
+\href{https://www.tug.org/mactex/}{https://www.tug.org/mactex/}
+\item	Extract and double click to run the installer. It does the entire configuration, sit back and relax.
 \end{enumerate}
 
-\section*{Unix/Linux}
+\subsection*{TexStudio - \TeX~ editor}
+\begin{enumerate}
+\item	Download TexStudio from\\
+\href{http://texstudio.sourceforge.net/\#downloads}
+{http://texstudio.sourceforge.net/\#downloads} 
+\item	Extract and Start
+\end{enumerate}
 
-\subsubsection*{Fedora/RedHat/CentOS:}
+
+\section*{Unix/Linux}
+\subsection*{TeXLive - \TeX~ distribution}
+\subsubsection*{Getting the distribution:}
+\begin{enumerate}
+\item	TexLive can be downloaded from\\
+\href{http://www.tug.org/texlive/acquire-netinstall.html}
+{http://www.tug.org/texlive/acquire-netinstall.html}.
+\item	TexLive is provided by most operating system you can use (rpm,apt-get or yum) to get TexLive distributions
+\end{enumerate}
+
+\subsubsection*{Installation}
+\begin{enumerate}
+\item	Mount the ISO file in the mnt directory
 \begin{verbatim}
-sudo yum install texlive
-sudo yum install psutils
+mount -t iso9660 -o ro,loop,noauto /your/texlive####.iso /mnt
+\end{verbatim}
+
+\item	Install wget on your OS (use rpm, apt-get or yum install)
+\item	Run the installer script install-tl.
+\begin{verbatim}
+	cd /your/download/directory
+	./install-tl
+\end{verbatim}
+\item	Enter command `i' for installation
+
+\item	Post-Installation configuration:\\
+\href{http://www.tug.org/texlive/doc/texlive-en/texlive-en.html\#x1-320003.4.1}
+{http://www.tug.org/texlive/doc/texlive-en/texlive-en.html\#x1-320003.4.1} 
+\item	Set the path for the directory of TexLive binaries in your .bashrc file
+\end{enumerate}
+
+\subsubsection*{For 32bit OS}
+For Bourne-compatible shells such as bash, and using Intel x86 GNU/Linux and a default directory setup as an example, the file to edit might be \begin{verbatim}
+edit $~/.bashrc file and add following lines
+PATH=/usr/local/texlive/2011/bin/i386-linux:$PATH; 
+export PATH 
+MANPATH=/usr/local/texlive/2011/texmf/doc/man:$MANPATH;
+export MANPATH 
+INFOPATH=/usr/local/texlive/2011/texmf/doc/info:$INFOPATH;
+export INFOPATH
+\end{verbatim}
+\subsubsection*{For 64bit OS}
+\begin{verbatim}
+edit $~/.bashrc file and add following lines
+PATH=/usr/local/texlive/2011/bin/x86_64-linux:$PATH;
+export PATH 
+MANPATH=/usr/local/texlive/2011/texmf/doc/man:$MANPATH;
+export MANPATH 
+INFOPATH=/usr/local/texlive/2011/texmf/doc/info:$INFOPATH;
+export INFOPATH
+
+\end{verbatim}
+
+
+
+%\subsection{Installing directly using Linux packages} 
+\subsubsection*{Fedora/RedHat/CentOS:}
+\begin{verbatim} 
+sudo yum install texlive 
+sudo yum install psutils 
 \end{verbatim}
 
 
@@ -98,7 +126,7 @@ sudo zypper install texlive
 
 
 \subsubsection*{Debian/Ubuntu:}
-\begin{verbatim}
-sudo apt-get install texlive-full
+\begin{verbatim} 
+sudo apt-get install texlive texlive-latex-extra 
 sudo apt-get install psutils
 \end{verbatim}

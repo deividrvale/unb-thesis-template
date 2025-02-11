@@ -557,16 +557,16 @@ supported!}
   \usepackage[]{unicode-math}
   \setmainfont[
     Extension = .otf,
-    UprightFont = *-regular,
-    BoldFont = *-bold,
-    ItalicFont = *-italic,
-    BoldItalicFont = *-bolditalic,
-  ]{xits}
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic,
+  ]{XITS}
 
   \setmathfont[
     Extension = .otf,
-    BoldFont = *bold,
-  ]{xits-math}
+    BoldFont = XITSMath-Bold,
+  ]{XITSMath-Regular}
 
 \else
   % default: pdfLaTeX
@@ -633,23 +633,37 @@ supported!}
   \fi
 
 \else
-  % For PDF Online version
-  \hypersetup{
-    final=true,
-    plainpages=false,
-    pdfstartview=FitV,
-    pdftoolbar=true,
-    pdfmenubar=true,
-    bookmarksopen=true,
-    bookmarksnumbered=true,
-    breaklinks=true,
-    linktocpage,
-    colorlinks=true,
-    linkcolor=blue,
-    urlcolor=blue,
-    citecolor=blue,
-    anchorcolor=green
-  }
+  % <deivid>
+%********************************************************************
+% Colors
+% ********************************************************************
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\RequirePackage{xcolor} % [dvipsnames]
+\definecolor{CTsemi}{gray}{0.55} % chapter numbers will be semi transparent .5 .55 .6 .0
+\definecolor{CTcitation}{rgb}{0,0.5,0} % WebGreen
+\definecolor{CTurl}{named}{Maroon} % Maroon
+\definecolor{CTtitle}{named}{Maroon} % Maroon {cmyk}{0, 0.87, 0.68, 0.32}
+\definecolor{CTlink}{named}{RoyalBlue} % RoyalBlue {cmyk}{1, 0.50, 0, 0}
+\definecolor{halfgray}{gray}{0.55} % chapter numbers will be semi transparent .5 .55 .6 .0
+\definecolor{webgreen}{rgb}{0,0.5,0}
+\definecolor{webbrown}{rgb}{0.6,0,0}
+
+\hypersetup{
+  final=true,
+  plainpages=false,
+  pdfstartview=FitV,
+  pdftoolbar=true,
+  pdfmenubar=true,
+  bookmarksopen=true,
+  bookmarksnumbered=true,
+  breaklinks=true,
+  linktocpage,
+  colorlinks=true,
+  linkcolor=CTlink,
+  urlcolor=CTurl,
+  citecolor=CTcitation,
+  anchorcolor=green
+}
 
   \ifsetCustomMargin
     % Margin to be define in preamble using geometry package
@@ -892,14 +906,14 @@ wish to left align your text}
 % Acknowledgment title text
 \newcommand{\@acknowledgementstitle}{Acknowledgements}
 
-% Acknowledgment title text
 \newcommand{\@agradecimentostitulo}{Agradecimentos}
 
 % Abstract title text
 \newcommand{\@abstracttitle}{Abstract}
 
-% Abstract title text
-\newcommand{\@resumotitulo}{Resumo}
+% <deivid>
+% Texto título resumo
+\newcommand{\@resumotitle}{Resumo}
 
 % Names for the nomenclature groups
 \newcommand{\@nomenclatureromans}{Roman Symbols}
@@ -1163,7 +1177,7 @@ wish to left align your text}
 % Normal abstract in the thesis
   \cleardoublepage
   \setsinglecolumn
-  \chapter*{\centering \Large \@resumotitulo}
+  \chapter*{\centering \Large \@resumotitle}
   \thispagestyle{empty}
 \fi
 }
